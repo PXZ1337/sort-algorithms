@@ -16,7 +16,7 @@ def bubble_sort(elements: list) -> list:
         if not swapped:
             break
 
-    print(f"--- Compares / Switches: {c} / {s}")
+    print(f"--- Compares / Swaps: {c} / {s}")
     print("--- %s seconds ---" % (time.time() - start_time))
 
     return elements
