@@ -1,8 +1,6 @@
-import random
-import time
+from test_utils import test_sort_function
 
 def bubble_sort(elements: list) -> list:
-    start_time = time.time()
     s, c = 0, 0
 
     for (i,_) in enumerate(elements):
@@ -17,24 +15,15 @@ def bubble_sort(elements: list) -> list:
             break
 
     print(f"--- Compares / Swaps: {c} / {s}")
-    print("--- %s seconds ---" % (time.time() - start_time))
 
     return elements
 
-def test_bubble_sort(size_of_sample_set: int):
-    x, y = -size_of_sample_set, size_of_sample_set
-    expectation = random.sample(range(x, y), size_of_sample_set)
-    actual = bubble_sort(expectation)
-    expectation.sort()
-
-    assert actual == expectation
-
 
 if __name__ == '__main__':
-    test_bubble_sort(10)
-    test_bubble_sort(5000)
-    test_bubble_sort(10000)
-    test_bubble_sort(20000)
+    test_sort_function(size_of_sample_set=10, sort_func=bubble_sort)
+    test_sort_function(size_of_sample_set=5000, sort_func=bubble_sort)
+    test_sort_function(size_of_sample_set=10000, sort_func=bubble_sort)
+    test_sort_function(size_of_sample_set=20000, sort_func=bubble_sort)
     # really slow from here
-    test_bubble_sort(50000)
+    test_sort_function(size_of_sample_set=50000, sort_func=bubble_sort)
     
