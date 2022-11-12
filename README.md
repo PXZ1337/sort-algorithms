@@ -13,11 +13,9 @@ The implementations are written with the programming language Python and tested 
 ## Table of contents <!-- omit in toc -->
 
 - [Bubblesort](#bubblesort)
-  - [Performance (BS)](#performance-bs)
 - [Selectionsort](#selectionsort)
-  - [Performance (SS)](#performance-ss)
 - [Insertionsort](#insertionsort)
-  - [Performance (IS)](#performance-is)
+- [Quicksort](#quicksort)
 
 ## Bubblesort
 
@@ -25,7 +23,7 @@ Simple in-place sorting algorithm which iterates over each element in the list a
 
 Performs poorly on big unsorted lists and is primary used as and educational tool.
 
-### Performance (BS)
+### Time-Complexity (BS) <!-- omit in toc -->
 
 | Case     | Time complexity         |
 |----------|-------------------------|
@@ -44,7 +42,7 @@ The script will excute the sorting_algorithm multiple times with an random gener
 
 Simple in-place sorting algorithm which sorts list's by creating a sorted sublist. This sorted list is filled by finding the smallest element each iteration in the unsorted list and put them at the end of the sorted list.
 
-### Performance (SS)
+### Time-Complexity (SS) <!-- omit in toc -->
 
 | Case     | Time complexity      |
 |----------|----------------------|
@@ -63,7 +61,7 @@ In-place sorting algorithm that is much less efficient than quicksort, heapsort 
 
 It iterates over the list, consumes one element each iteration and move's that element to the correct position in the list.
 
-### Performance (IS)
+### Time-Complexity (IS) <!-- omit in toc -->
 
 | Case     | Time complexity      |
 |----------|----------------------|
@@ -76,3 +74,16 @@ It iterates over the list, consumes one element each iteration and move's that e
 
 Run [insertion_sort.py](src/insertion_sort.py).
 
+## Quicksort
+
+Commonly used in-place sorting algorithm which could be faster than mergesort and about 2-3 times faster than heapsort. Quicksort uses the concept of devide-and-conquer to devide a list into 2 sub lists according to wheter the elements are less or greater than the pivot element.
+
+### Time-Complexity (QS) <!-- omit in toc -->
+
+| Case     | Time complexity      |
+|----------|----------------------|
+| Worst       | O(n^2)            |
+| Best        | O(n log(n))       |
+| Average     | O(n log(n))       |
+
+Run [quick_sort.py](src/quick_sort.py).
